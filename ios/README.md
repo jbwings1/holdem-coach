@@ -1,12 +1,5 @@
 # iOS (optional)
 
-SwiftUI sources live in `HoldemCoach/`.
+SwiftUI sources are under `HoldemCoach/`.
 
-Open `HoldemCoach.xcodeproj` in Xcode on a Mac.
-
-If `project.pbxproj` needs rebuilding, run:
-
-```bash
-cd ios/HoldemCoach.xcodeproj
-bash assemble-pbxproj.sh
-```
+Open `HoldemCoach.xcodeproj` in Xcode on a Mac. The web app at the repo root is enough if you do not have a Mac.
