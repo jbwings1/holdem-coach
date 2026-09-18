@@ -22,11 +22,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Publish only the web app (repo root), not ios/ or .github/
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          cp index.html styles.css sw.js manifest.webmanifest .nojekyll _site/
+          cp -R js icons _site/
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
